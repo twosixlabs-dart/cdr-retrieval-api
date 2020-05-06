@@ -22,8 +22,14 @@ paths:
           schema:
             type: string
         - in: query
-          description: Latest timestamp of cdr version (defaults to current date)
+          description: Materialize CDR as it existed on this date, ISO Local Date Format (2020-05-05)
           name: date
+          required: false
+          schema:
+            type: string
+        - in: query
+          description: Materialize CDR as of this timestamp - ISO Offset Date Format (2020-05-05T15:51:52.406Z)
+          name: timestamp
           required: false
           schema:
             type: string
